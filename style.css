@@ -1,0 +1,84 @@
+/* #FF0066 */
+/* #BB004B */
+
+/* #002233 
+  #0066FF
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&family=Roboto+Slab&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid #fff; */
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+.main-section {
+  background: center/cover no-repeat url("./Images/background3.svg");
+  overflow: hidden;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.logo:link,
+.logo:visited {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  color: #fff;
+}
+.get-started:link,
+.get-started:visited,
+.signup-btn:link,
+.signup-btn:visited,
+.login-btn:link {
+  padding: 0.6rem 1.2rem;
+  background-color: #bb004b;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.get-started:hover,
+.get-started:active,
+.signup-btn:hover,
+.signup-btn:active {
+  background-color: #830035;
+}
+.login-btn:link,
+.login-btn:visited {
+  background-color: #002233;
+  border: 1px solid #fff;
+}
+.login-btn:hover,
+.login-btn:active {
+  background-color: #1a3847;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: #f1ccdb;
+  max-width: 50rem;
+  height: 100vh;
+  margin: 0 auto;
+}
+.heading-text {
+  font-size: 4rem;
+  text-align: center;
+}
+.heading-text span {
+  color: #2ad157;
+}
+.btns {
+  display: flex;
+  gap: 1rem;
+}
