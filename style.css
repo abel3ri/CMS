@@ -1,5 +1,5 @@
-/* #FF0066 */
-/* #BB004B */
+/* #FF0066 Primary color */
+/* #BB004B  Secondary Color*/
 
 /* #002233 
   #0066FF
@@ -14,15 +14,33 @@
 html {
   font-family: "Poppins", sans-serif;
 }
-.main-section {
+
+/* Header section */
+.header-section {
   background: center/cover no-repeat url("./Images/background3.svg");
   overflow: hidden;
+  /* margin-bottom: 10rem; */
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+.nav-link:is(:link, :visited) {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  padding: 4px 8px;
+}
+.nav-link:is(:hover, :active) {
+  background-color: #d4d4d4cd;
+  color: #fff;
+  border-radius: 3px;
 }
 .logo:link,
 .logo:visited {
@@ -41,7 +59,7 @@ html {
 .signup-btn:visited,
 .login-btn:link {
   padding: 0.6rem 1.2rem;
-  background-color: #bb004b;
+  background-color: #0066ff;
   border-radius: 5px;
   transition: all 0.3s;
 }
@@ -49,7 +67,7 @@ html {
 .get-started:active,
 .signup-btn:hover,
 .signup-btn:active {
-  background-color: #830035;
+  background-color: #0047b3;
 }
 .login-btn:link,
 .login-btn:visited {
@@ -81,4 +99,77 @@ html {
 .btns {
   display: flex;
   gap: 1rem;
+}
+.learn-more {
+  color: #fff;
+  display: flex;
+}
+.arrow-down {
+  width: 1.2rem;
+}
+/* End of header section */
+/*! ********************************** */
+
+/* How it works section */
+.how-it-works-section {
+  /* max-width: 90rem; */
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.how {
+  display: flex;
+  flex-direction: column;
+  background-color: #0066ff;
+  align-items: center;
+  gap: 5rem;
+  padding: 6rem 2rem;
+}
+.how-heading {
+  text-align: center;
+  color: #fff;
+}
+.how-heading h1 {
+  font-size: 2rem;
+}
+.how-container {
+  display: flex;
+  max-width: 70rem;
+  gap: 2rem;
+}
+.how-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 1px 3px 4px 5px rgba(0, 0, 0, 0.1);
+}
+.how-num {
+  position: absolute;
+  top: -10%;
+  color: #0047b3;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.how-img {
+  max-width: 70%;
+}
+
+.how-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #868e96;
+}
+.how-text h3 {
+  color: #4d8ef1;
 }
