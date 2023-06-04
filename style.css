@@ -1,5 +1,5 @@
-/* #FF0066 */
-/* #BB004B */
+/* #FF0066 Primary color */
+/* #BB004B  Secondary Color*/
 
 /* #002233 
   #0066FF
@@ -14,7 +14,9 @@
 html {
   font-family: "Poppins", sans-serif;
 }
-.main-section {
+
+/* Header section */
+.header-section {
   background: center/cover no-repeat url("./Images/background3.svg");
   overflow: hidden;
 }
@@ -23,6 +25,21 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+.nav-link:is(:link, :visited) {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  padding: 4px 8px;
+}
+.nav-link:is(:hover, :active) {
+  background-color: #d4d4d4cd;
+  color: #fff;
+  border-radius: 3px;
 }
 .logo:link,
 .logo:visited {
@@ -41,7 +58,7 @@ html {
 .signup-btn:visited,
 .login-btn:link {
   padding: 0.6rem 1.2rem;
-  background-color: #bb004b;
+  background-color: #0066ff;
   border-radius: 5px;
   transition: all 0.3s;
 }
@@ -49,7 +66,7 @@ html {
 .get-started:active,
 .signup-btn:hover,
 .signup-btn:active {
-  background-color: #830035;
+  background-color: #0047b3;
 }
 .login-btn:link,
 .login-btn:visited {
@@ -82,3 +99,11 @@ html {
   display: flex;
   gap: 1rem;
 }
+.learn-more {
+  color: #fff;
+  display: flex;
+}
+.arrow-down {
+  width: 1.2rem;
+}
+/* End of header section */
