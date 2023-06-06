@@ -137,6 +137,7 @@ html {
   display: flex;
   max-width: 70rem;
   gap: 2rem;
+  overflow: hidden;
 }
 .how-item {
   position: relative;
@@ -151,14 +152,30 @@ html {
   padding: 2rem;
   border-radius: 6px;
   box-shadow: 1px 3px 4px 5px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: all 1s;
 }
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.hidden.how-item:nth-child(1) {
+  transform: translateX(-6rem);
+}
+.hidden.how-item:nth-child(2) {
+  transform: translateY(6rem);
+}
+.hidden.how-item:nth-child(3) {
+  transform: translateX(6rem);
+}
+
 .how-num {
   position: absolute;
-  top: -10%;
+  top: 2px;
+  left: 2px;
   color: #0047b3;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 50%;
+  padding: 6px;
+  font-size: 1.2rem;
 }
 .how-img {
   max-width: 70%;
@@ -173,6 +190,9 @@ html {
 .how-text h3 {
   color: #4d8ef1;
 }
+
+/* toggle class for implementing revealing elements on scroll */
+
 /* ! **************************** */
 /* End of how it works section */
 
