@@ -20,13 +20,21 @@ html {
   background: center/cover no-repeat url("./Images/background3.svg");
   overflow: hidden;
   padding-bottom: 10rem;
-  /* margin-bottom: 10rem; */
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  height: 5rem;
+  width: 100%;
+  z-index: 100;
+
+  transition: all 1s;
+}
+.sticky {
+  position: fixed;
+  background-color: #002233;
 }
 .nav-links {
   display: flex;
@@ -113,8 +121,6 @@ html {
 
 /* How it works section */
 .how-it-works-section {
-  /* max-width: 90rem; */
-  /* height: 100vh; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -125,7 +131,7 @@ html {
   background-color: #0066ff;
   align-items: center;
   gap: 5rem;
-  padding: 6rem 2rem;
+  padding: 11rem 2rem;
 }
 .how-heading {
   text-align: center;
@@ -330,12 +336,20 @@ html {
   grid-row: 2;
   text-align: center;
 }
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+.social-icons a {
+  font-size: 2rem;
+}
 .section {
   opacity: 1;
   transition: all 1s;
 }
 .section-hidden {
-  opacity: 0.5;
+  opacity: 0;
   pointer-events: none;
   transform: translateY(-10rem);
 }

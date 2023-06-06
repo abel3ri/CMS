@@ -35,8 +35,6 @@ slider();
 function smoothReveal() {
   // Smooth reveal sections
   const sections = document.querySelectorAll("section");
-  const header = document.querySelector("section-header");
-
   const sectionObserver = new IntersectionObserver(
     (entries) => {
       const [entry] = entries;
@@ -97,3 +95,53 @@ function learnMoreSmooth() {
   });
 }
 learnMoreSmooth();
+
+// Sroll to each section
+
+function scrollToSection() {
+  const navLinks = document.querySelector(".nav-links");
+  navLinks.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (e.target.classList.contains("nav-link")) {
+      const sectionCoords = document
+        .querySelector(`${e.target.getAttribute("href")}`)
+        .getBoundingClientRect();
+
+      window.scrollTo({
+        top: window.scrollY + sectionCoords.top,
+        left: window.scrollX + sectionCoords.left,
+        behavior: "smooth",
+      });
+    }
+  });
+}
+scrollToSection();
+
+// Sticky nav implementation
+function stickyNav() {
+  const headerSection = document.querySelector(".header-section");
+  const nav = document.querySelector(".nav");
+  const headerObserver = new IntersectionObserver(
+    (entries) => {
+      const [entry] = entries;
+      if (!entry.isIntersecting) {
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    },
+    {
+      rootMargin: "-80px",
+    }
+  );
+
+  headerObserver.observe(headerSection);
+}
+stickyNav();
+
+const copyright = document.querySelector(".copyright");
+
+copyright.insertAdjacentText(
+  "beforeend",
+  ` ${new Date().getUTCFullYear()}. All rights reserved.`
+);
