@@ -19,6 +19,7 @@ html {
 .header-section {
   background: center/cover no-repeat url("./Images/background3.svg");
   overflow: hidden;
+  padding-bottom: 10rem;
   /* margin-bottom: 10rem; */
 }
 .nav {
@@ -153,7 +154,7 @@ html {
   border-radius: 6px;
   box-shadow: 1px 3px 4px 5px rgba(0, 0, 0, 0.1);
   opacity: 1;
-  transition: all 1s;
+  transition: opacity, transform 1s;
 }
 .hidden {
   opacity: 0;
@@ -292,8 +293,10 @@ html {
 /* FOOTER SECTION */
 .footer {
   /* background: center/cover no-repeat url("./Images/footer-background.svg"); */
-  padding: 6rem 3rem 0;
-  margin: 6rem 0 2rem;
+  padding: 6rem 3rem 2rem;
+  max-height: 40rem;
+  margin: 6rem 0 0;
+  background-color: #002233;
 }
 .footer-container {
   display: grid;
@@ -301,7 +304,7 @@ html {
   justify-items: center;
   row-gap: 3rem;
 
-  color: #002233;
+  color: #fff;
 }
 .quick-links,
 .contact-us {
@@ -311,7 +314,7 @@ html {
 }
 .footer-container a:link,
 .footer-container a:visited {
-  color: #002233;
+  color: #fff;
 }
 .quick-links a:link,
 .quick-links a:visited {
@@ -320,7 +323,7 @@ html {
 }
 .quick-links a:hover,
 .quick-links a:active {
-  background-color: #00223329;
+  background-color: #a2a3a457;
 }
 .dbu-cms {
   grid-column: 2;
@@ -329,12 +332,12 @@ html {
 }
 .section {
   opacity: 1;
-  transition: transform 1s;
+  transition: all 1s;
 }
 .section-hidden {
-  opacity: 0;
+  opacity: 0.5;
   pointer-events: none;
-  transform: translateY(10rem);
+  transform: translateY(-10rem);
 }
 /* END OF FOOTER SECTION */
 /* ! **************************** */
