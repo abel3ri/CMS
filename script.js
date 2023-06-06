@@ -80,3 +80,20 @@ function smoothReveal() {
   });
 }
 smoothReveal();
+
+// Implement smooth scrolling on the learn more button
+
+function learnMoreSmooth() {
+  const learnMoreBtn = document.querySelector(".learn-more");
+  const howSection = document.querySelector("#how-section");
+  learnMoreBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const howSectionCoords = howSection.getBoundingClientRect();
+    window.scrollTo({
+      left: window.scrollX + howSectionCoords.left,
+      top: window.scrollY + howSectionCoords.top,
+      behavior: "smooth",
+    });
+  });
+}
+learnMoreSmooth();
