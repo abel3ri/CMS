@@ -32,25 +32,51 @@ slider();
 
 // Implement smooth revealing elements when scroll
 
-const howSection = document.querySelector(".how-it-works-section");
-const howItems = document.querySelectorAll(".how-item");
+function smoothReveal() {
+  // Smooth reveal sections
+  const sections = document.querySelectorAll("section");
+  const header = document.querySelector("section-header");
 
-const howSectionObeserver = new IntersectionObserver(
-  (entries) => {
-    const [entry] = entries;
-    if (!entry.isIntersecting) return;
-    howItems.forEach((howItem) => {
-      howItem.classList.remove("hidden");
-    });
-    howSectionObeserver.unobserve(entry.target);
-  },
-  {
-    threshold: 0.4,
-    rootMargin: "-100px",
-  }
-);
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      const [entry] = entries;
+      if (!entry.isIntersecting) return;
+      entry.target.classList.remove("section-hidden");
+      sectionObserver.unobserve(entry.target);
+    },
+    {
+      threshold: 0.2,
+    }
+  );
 
-howItems.forEach((howItem) => {
-  howItem.classList.add("hidden");
-  howSectionObeserver.observe(howSection);
-});
+  sections.forEach((section) => {
+    section.classList.add("section-hidden");
+    sectionObserver.observe(section);
+  });
+
+  // Smooth reveal how section cards
+
+  const howSection = document.querySelector(".how-it-works-section");
+  const howItems = document.querySelectorAll(".how-item");
+
+  const howSectionObeserver = new IntersectionObserver(
+    (entries) => {
+      const [entry] = entries;
+      if (!entry.isIntersecting) return;
+      howItems.forEach((howItem) => {
+        howItem.classList.remove("hidden");
+      });
+      howSectionObeserver.unobserve(entry.target);
+    },
+    {
+      threshold: 0.4,
+      rootMargin: "-100px",
+    }
+  );
+
+  howItems.forEach((howItem) => {
+    howItem.classList.add("hidden");
+    howSectionObeserver.observe(howSection);
+  });
+}
+smoothReveal();
