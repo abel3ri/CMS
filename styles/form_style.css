@@ -16,6 +16,7 @@ html {
   background-color: #002233;
 }
 .form-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,6 +32,37 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.error-pop-up {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: -5%;
+
+  max-width: 40rem;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  background-color: #c92a2a;
+  color: #fff;
+  transform: translateY(-10rem);
+
+  transition: all 0.5s;
+}
+.close {
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  top: -30%;
+  right: -5%;
+  position: absolute;
+  width: 32px;
+  transition: all 0.5s;
+  transform: translateY(-10rem);
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 .form-container h1 {
   font-size: 1.6rem;
