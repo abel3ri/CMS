@@ -29,7 +29,6 @@ html {
   height: 5rem;
   width: 100%;
   z-index: 100;
-
   transition: all 1s;
 }
 .sticky {

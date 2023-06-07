@@ -4,29 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Sign up</title>
     <link rel="stylesheet" href="../styles/form_style.css" />
   </head>
   <body>
     <section class="form-container">
-      <h1>Welcome back!</h1>
+      <h1>Welcome!</h1>
       <form action="#">
+        <input type="text" placeholder="Name" name="name" class="form-input" />
         <input type="text" placeholder="Id number" name=id-number"
         class="form-input" />
+        <input
+          type="email"
+          placeholder="E-mail"
+          name="email"
+          class="form-input"
+        />
         <input
           type="password"
           placeholder="Password"
           name="password"
           class="form-input"
         />
+        <input
+          type="password"
+          placeholder="Re-enter Password"
+          name="password"
+          class="form-input"
+        />
         <div class="btns">
-          <input type="submit" value="Login" name="login" class="submit-btn" />
+          <input
+            type="submit"
+            value="Sign up"
+            name="signup"
+            class="submit-btn"
+          />
           <a href="../pages/index.html" class="cancel-btn"> Cancel </a>
         </div>
       </form>
       <div>
-        <p>Don't have an account?</p>
-        <a class="sign-up" href="./signup.html">Sing up</a>
+        <p>Already have an account?</p>
+        <a class="sign-up" href="./login.html">Login</a>
       </div>
     </section>
   </body>
