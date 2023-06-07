@@ -16,6 +16,9 @@ const validBorder = function (element) {
   // function for making the input border red on error
   element.style.outline = "3px solid green";
 };
+const normalBorder = function (element) {
+  element.style.outline = "none";
+};
 // function that checks inputs
 function checkInputs() {
   // checking for id validation
@@ -51,6 +54,7 @@ function checkInputs() {
     val.validPass = false;
     val.validRePass = false;
   }
+  // make the inputs border green if they're valid.
   if (val.validId) {
     validBorder(idInput);
     idInput.parentElement.firstElementChild.innerText = "";
@@ -60,6 +64,8 @@ function checkInputs() {
     rePassInput.parentElement.firstElementChild.innerText = "";
     validBorder(passInput);
     validBorder(rePassInput);
+    validBorder(nameInput);
+    validBorder(emailInput);
   }
 
   return val;
@@ -73,8 +79,33 @@ function validateForm() {
     // check if each property of val is true
     if (!(validId && validPass && validRePass)) {
       e.preventDefault();
+    } else {
+      // reset inputs fields after the form is submitted
+      e.target.reset();
+      normalBorder(nameInput);
+      normalBorder(passInput);
+      normalBorder(emailInput);
+      normalBorder(idInput);
+      normalBorder(rePassInput);
     }
   });
 }
 // final function calling for validation
 validateForm();
+
+// Check if the user id is already taken by somone else and display an erro  messag the will fade out automatically after 3 seconds
+
+function close() {
+  const closeBtn = document.querySelector(".close");
+  const errorTopUp = document.querySelector(".error-pop-up");
+  if (errorTopUp.getAttribute("data-show")) {
+    errorTopUp.classList.add("show");
+    closeBtn.classList.add("show");
+
+    setTimeout(() => {
+      errorTopUp.classList.remove("show");
+      closeBtn.classList.remove("show");
+    }, 3000);
+  }
+}
+close();
