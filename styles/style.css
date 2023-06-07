@@ -353,5 +353,26 @@ html {
   pointer-events: none;
   transform: translateY(-10rem);
 }
+.back-to-top {
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+
+  background-color: rgba(0, 34, 51, 0.8);
+  color: #fff;
+
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 2rem;
+  transition: all 1s;
+}
+.show.back-to-top {
+  opacity: 1;
+  pointer-events: visible;
+}
 /* END OF FOOTER SECTION */
 /* ! **************************** */
