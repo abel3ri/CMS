@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CMS</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
     <section id="header-section" class="header-section">
@@ -24,8 +24,8 @@
           <span> without </span> going anywhere!
         </h1>
         <div class="btns">
-          <a href="#" class="btn login-btn">Login</a>
-          <a href="#" class="btn signup-btn">Sign up</a>
+          <a href="../pages/login.html" class="btn login-btn">Login</a>
+          <a href="../pages/signup.html" class="btn signup-btn">Sign up</a>
         </div>
 
         <h4 class="">Over 1000+ users within 1 month of launch</h4>
@@ -58,7 +58,7 @@
           <div class="how-item">
             <strong class="how-num">01</strong>
             <img
-              src="./Images/Illustrations/sign-up.jpg"
+              src="../Images/Illustrations/sign-up.jpg"
               alt="sign-up"
               class="how-img"
             />
@@ -73,7 +73,7 @@
           <div class="how-item">
             <strong class="how-num">02</strong>
             <img
-              src="./Images/Illustrations/sign-in.jpg"
+              src="../Images/Illustrations/sign-in.jpg"
               alt="sign-up"
               class="how-img"
             />
@@ -88,7 +88,7 @@
           <div class="how-item">
             <strong class="how-num">03</strong>
             <img
-              src="./Images/Illustrations/sign-up.jpg"
+              src="../Images/Illustrations/sign-up.jpg"
               alt="sign-up"
               class="how-img"
             />
@@ -103,7 +103,7 @@
         </div>
       </div>
     </section>
-    <section id="testimonial-section" class="section section-3">
+    <section id="testimonial-section" class="section testimonial-section">
       <h1 class="testimonial-header">
         See what our students have to say and decide for your self!
       </h1>
@@ -119,7 +119,7 @@
               officiis quod dolore! Deleniti.
             </blockquote>
             <img
-              src="./Images/Avatars/avatar1.png"
+              src="../Images/Avatars/avatar1.png"
               class="testimonial-image"
               alt="Avatar image"
             />
@@ -138,7 +138,7 @@
             </blockquote>
 
             <img
-              src="./Images/Avatars/avatar2.png"
+              src="../Images/Avatars/avatar2.png"
               class="testimonial-image"
               alt="Avatar image"
             />
@@ -156,7 +156,7 @@
               maiores aut dolor repellendus.
             </blockquote>
             <img
-              src="./Images/Avatars/avatar3.png"
+              src="../Images/Avatars/avatar3.png"
               class="testimonial-image"
               alt="Avatar image"
             />
@@ -201,10 +201,10 @@
       <div class="footer-container">
         <div class="quick-links">
           <h4>Quick links</h4>
-          <a href="#">Home</a>
-          <a href="#">How it works</a>
-          <a href="#">Create account</a>
-          <a href="#">Login</a>
+          <a href="#header-section">Home</a>
+          <a href="#how-section">How it works</a>
+          <a href="../pages/signup.html">Create account</a>
+          <a href="../pages/login.html">Login</a>
         </div>
         <div class="contact-us">
           <h4>Contact us</h4>
@@ -228,6 +228,9 @@
         </div>
       </div>
     </footer>
+    <button class="back-to-top">
+      <ion-icon name="chevron-up-outline"></ion-icon>
+    </button>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -236,6 +239,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="./script.js"></script>
+    <script src="../scripts/script.js"></script>
   </body>
 </html>

@@ -17,7 +17,7 @@ html {
 
 /* Header section */
 .header-section {
-  background: center/cover no-repeat url("./Images/background3.svg");
+  background: center/cover no-repeat url("../Images/background3.svg");
   overflow: hidden;
   padding-bottom: 10rem;
 }
@@ -29,7 +29,6 @@ html {
   height: 5rem;
   width: 100%;
   z-index: 100;
-
   transition: all 1s;
 }
 .sticky {
@@ -204,8 +203,9 @@ html {
 /* End of how it works section */
 
 /* Testimonials section */
-.section-3 {
+.testimonial-section {
   margin: 10rem auto;
+  padding-top: 10rem;
   max-width: 70rem;
   margin: o auto;
 }
@@ -352,6 +352,27 @@ html {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-10rem);
+}
+.back-to-top {
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+
+  background-color: rgba(0, 34, 51, 0.8);
+  color: #fff;
+
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 2rem;
+  transition: all 1s;
+}
+.show.back-to-top {
+  opacity: 1;
+  pointer-events: visible;
 }
 /* END OF FOOTER SECTION */
 /* ! **************************** */

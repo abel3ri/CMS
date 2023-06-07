@@ -121,6 +121,7 @@ scrollToSection();
 function stickyNav() {
   const headerSection = document.querySelector(".header-section");
   const nav = document.querySelector(".nav");
+
   const headerObserver = new IntersectionObserver(
     (entries) => {
       const [entry] = entries;
@@ -139,9 +140,39 @@ function stickyNav() {
 }
 stickyNav();
 
+// Add year dynamically
+
 const copyright = document.querySelector(".copyright");
 
 copyright.insertAdjacentText(
   "beforeend",
   ` ${new Date().getUTCFullYear()}. All rights reserved.`
 );
+
+function backToTop() {
+  const backToTopBtn = document.querySelector(".back-to-top");
+  const header = document.querySelector(".header-section");
+  const headerObserver = new IntersectionObserver(
+    (entries) => {
+      const [entry] = entries;
+      if (!entry.isIntersecting) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    },
+    {
+      rootMargin: "-400px",
+    }
+  );
+
+  headerObserver.observe(header);
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      behavior: "smooth",
+      top: window.top,
+      left: window.left,
+    });
+  });
+}
+backToTop();
