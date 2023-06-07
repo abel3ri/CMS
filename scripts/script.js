@@ -139,6 +139,8 @@ function stickyNav() {
 }
 stickyNav();
 
+// Add year dynamically
+
 const copyright = document.querySelector(".copyright");
 
 copyright.insertAdjacentText(

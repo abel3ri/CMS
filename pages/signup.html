@@ -10,28 +10,55 @@
   <body>
     <section class="form-container">
       <h1>Welcome!</h1>
-      <form action="#">
-        <input type="text" placeholder="Name" name="name" class="form-input" />
-        <input type="text" placeholder="Id number" name=id-number"
-        class="form-input" />
-        <input
-          type="email"
-          placeholder="E-mail"
-          name="email"
-          class="form-input"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          name="password"
-          class="form-input"
-        />
-        <input
-          type="password"
-          placeholder="Re-enter Password"
-          name="password"
-          class="form-input"
-        />
+      <form method="GET">
+        <div class="input-container">
+          <div class="error"></div>
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            class="form-input"
+            required
+          />
+        </div>
+        <div class="input-container">
+          <div class="error"></div>
+          <input
+            type="text"
+            placeholder="Id number"
+            name="idNumber"
+            class="form-input"
+          />
+        </div>
+        <div class="input-container">
+          <div class="error"></div>
+          <input
+            type="email"
+            placeholder="E-mail"
+            name="email"
+            class="form-input"
+            required
+          />
+        </div>
+        <div class="input-container">
+          <div class="error"></div>
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            class="form-input"
+          />
+        </div>
+        <div class="input-container">
+          <div class="error"></div>
+          <input
+            type="password"
+            placeholder="Re-enter Password"
+            name="rePassword"
+            class="form-input"
+          />
+        </div>
+
         <div class="btns">
           <input
             type="submit"
@@ -47,5 +74,6 @@
         <a class="sign-up" href="./login.html">Login</a>
       </div>
     </section>
+    <script src="../scripts/formValidator.js"></script>
   </body>
 </html>
