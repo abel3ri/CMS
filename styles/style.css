@@ -17,7 +17,7 @@ html {
 
 /* Header section */
 .header-section {
-  background: center/cover no-repeat url("./Images/background3.svg");
+  background: center/cover no-repeat url("../Images/background3.svg");
   overflow: hidden;
   padding-bottom: 10rem;
 }
@@ -204,8 +204,9 @@ html {
 /* End of how it works section */
 
 /* Testimonials section */
-.section-3 {
+.testimonial-section {
   margin: 10rem auto;
+  padding-top: 10rem;
   max-width: 70rem;
   margin: o auto;
 }
