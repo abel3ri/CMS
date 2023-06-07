@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+
+  position: relative;
+  background-color: #000000fe;
+  height: 5rem;
+}
+.menu,
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2.4rem;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.close {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  transition: all 0.3s;
+  top: 1rem;
+  right: 3rem;
+}
+.username {
+  color: #000;
+}
+.cms {
+  color: #fff;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  height: 30rem;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.circle-img {
+  position: relative;
+  background-color: #fff;
+  border: 10px solid #000;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-img ion-icon {
+  font-size: 9rem;
+  text-align: center;
+}
+
+.btns {
+  display: flex;
+  gap: 1rem;
+}
+.btn:is(:link, :visited) {
+  text-decoration: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 1rem 2rem;
+  background-color: black;
+  transition: all 0.3s;
+}
+.btn:is(:hover, :active) {
+  background-color: rgb(48, 48, 48);
+}
+.overlay {
+  height: 100vh;
+  width: 50vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(30rem);
+  background-color: #000000ff;
+
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+
+  padding-top: 10rem;
+  margin-left: 40%;
+}
+.overlay-content div a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+
+  color: #fff;
+}
+.overlay-content a:is(:link, :visited) {
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.overlay-icon {
+  font-size: 3rem;
+}
+.show {
+  transform: translate(0);
+  opacity: 1;
+  visibility: visible;
+}
