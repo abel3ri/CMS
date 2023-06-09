@@ -1,0 +1,50 @@
+/* #FF0066 Primary color */
+/* #BB004B  Secondary Color*/
+
+/* #002233 
+  #0066FF
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&family=Roboto+Slab&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid #fff; */
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 50% 0 1rem;
+}
+.go-back:is(:link, :visited) {
+  width: 48px;
+  color: #000;
+  transition: all 0.3s;
+}
+.go-back:is(:active, :hover) {
+  color: #bb004b;
+}
+
+.profile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 40rem;
+}
+.profile div {
+  display: flex;
+  justify-content: space-between;
+}
+hr {
+  margin: 1rem 0;
+}
+.logout:is(:link, :visited) {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  background-color: #bb004b;
+}

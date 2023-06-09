@@ -81,7 +81,7 @@ function validateForm() {
       e.preventDefault();
     } else {
       // reset inputs fields after the form is submitted
-      e.target.reset();
+      // e.target.reset();
       normalBorder(nameInput);
       normalBorder(passInput);
       normalBorder(emailInput);
@@ -95,12 +95,18 @@ validateForm();
 
 // Check if the user id is already taken by somone else and display an erro  messag the will fade out automatically after 3 seconds
 
-function close() {
+function hideTopUp() {
   const closeBtn = document.querySelector(".close");
   const errorTopUp = document.querySelector(".error-pop-up");
   if (errorTopUp.getAttribute("data-show")) {
+    console.log(errorTopUp.getAttribute("data-show"));
     errorTopUp.classList.add("show");
     closeBtn.classList.add("show");
+
+    closeBtn.addEventListener("click", () => {
+      errorTopUp.classList.remove("show");
+      closeBtn.classList.remove("show");
+    });
 
     setTimeout(() => {
       errorTopUp.classList.remove("show");
@@ -108,4 +114,4 @@ function close() {
     }, 3000);
   }
 }
-close();
+hideTopUp();

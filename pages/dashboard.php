@@ -1,3 +1,7 @@
+<?php
+   include "../controllers/db_request.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,19 +18,21 @@
       <ion-icon class="close" name="close"></ion-icon>
     </nav>
     <section class="header">
-      <h1 class="username">Hello, username</h1>
+      <h1 class="username">Hello, <?php echo $userData['name'] ?></h1>
       <div class="circle-img">
         <ion-icon name="person-circle"></ion-icon>
       </div>
       <div class="btns">
         <a class="btn" href="#">Request clearance</a>
         <a class="btn" href="#">Check clearacne status</a>
+        <a class="btn" href="../pages/index.html">Home page</a>
+        <a class="btn" href="#">Logout</a>
       </div>
     </section>
     <div class="overlay">
       <div class="overlay-content">
         <div>
-          <a href="#"
+          <a href="../pages/profile.php"
             ><ion-icon class="overlay-icon" name="person-circle"></ion-icon>
             Profile</a
           >

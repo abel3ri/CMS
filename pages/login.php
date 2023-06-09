@@ -1,3 +1,9 @@
+<?php 
+  $val = "";
+  if(isset($_GET['val'])){
+    $val = $_GET['val'];
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,8 +15,31 @@
   </head>
   <body>
     <section class="form-container">
+      <div class="error-pop-up" data-show="<?php echo $val?>">
+        <p><?php  if(isset($_GET["val"])){
+          if($_GET['val'] == "no_match"){
+            echo "Incorrect password";
+          } else {
+            echo "User not found.";
+          }
+        }; ?></p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="close"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </div>
       <h1>Welcome back!</h1>
-      <form method="GET" action="./dashboard.html">
+      <form method="post" action="../controllers/login_cont.php">
         <div class="input-container">
           <div class="error"></div>
           <input
