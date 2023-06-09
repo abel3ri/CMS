@@ -19,7 +19,6 @@
                         // echo "Password do not match";
                     } else {
                         header("location:../pages/dashboard.php");
-                        // echo "Password matches";
                     }
                 } else {
                     // user not found
