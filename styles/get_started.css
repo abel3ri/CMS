@@ -15,7 +15,7 @@ html {
   font-family: "Poppins", sans-serif;
   font-size: 12px;
 }
-.container {
+.get-started-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +29,10 @@ html {
 }
 h1 {
   font-size: 4rem;
+
+  transform: translateY(-30rem);
+  opacity: 0;
+  transition: all 1s;
 }
 .btn:is(:link, :visited) {
   text-decoration: none;
@@ -43,4 +47,18 @@ h1 {
 .btn:is(:hover, :active) {
   background-color: #0066ffcf;
   color: #fff;
+}
+.login-btn {
+  opacity: 0;
+  transform: translateX(-30rem);
+  transition: opacity, transform 1s !important;
+}
+.signup-btn {
+  opacity: 0;
+  transform: translateX(30rem);
+  transition: opacity, transform 1s !important;
+}
+.show {
+  opacity: 1;
+  transform: translate(0);
 }
