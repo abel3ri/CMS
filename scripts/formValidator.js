@@ -99,7 +99,7 @@ function hideTopUp() {
   const closeBtn = document.querySelector(".close");
   const errorTopUp = document.querySelector(".error-pop-up");
   if (errorTopUp.getAttribute("data-show")) {
-    console.log(errorTopUp.getAttribute("data-show"));
+    // console.log(errorTopUp.getAttribute("data-show"));
     errorTopUp.classList.add("show");
     closeBtn.classList.add("show");
 
