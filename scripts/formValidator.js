@@ -81,7 +81,7 @@ function validateForm() {
       e.preventDefault();
     } else {
       // reset inputs fields after the form is submitted
-      e.target.reset();
+      // e.target.reset();
       normalBorder(nameInput);
       normalBorder(passInput);
       normalBorder(emailInput);
@@ -99,12 +99,18 @@ function close() {
   const closeBtn = document.querySelector(".close");
   const errorTopUp = document.querySelector(".error-pop-up");
   if (errorTopUp.getAttribute("data-show")) {
+    console.log(errorTopUp.getAttribute("data-show"));
     errorTopUp.classList.add("show");
     closeBtn.classList.add("show");
 
+    closeBtn.addEventListener("click", () => {
+      errorTopUp.classList.remove("show");
+      // closeBtn.classList.remove("show");
+    });
+
     setTimeout(() => {
       errorTopUp.classList.remove("show");
-      closeBtn.classList.remove("show");
+      // closeBtn.classList.remove("show");
     }, 3000);
   }
 }

@@ -1,10 +1,21 @@
+/* #FF0066 Primary color */
+/* #BB004B  Secondary Color*/
+
+/* #002233 
+  #0066FF
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&family=Roboto+Slab&display=swap");
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  /* border: 2px solid #fff; */
 }
 html {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
 }
 .nav {
   display: flex;
@@ -12,7 +23,7 @@ html {
   padding-left: 2rem;
 
   position: relative;
-  background-color: #000000fe;
+  background-color: #002233;
   height: 5rem;
 }
 .menu,
@@ -34,7 +45,7 @@ html {
   right: 3rem;
 }
 .username {
-  color: #000;
+  color: #002233;
 }
 .cms {
   color: #fff;
@@ -45,15 +56,13 @@ html {
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  height: 30rem;
   max-width: 30rem;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 .circle-img {
   position: relative;
-  background-color: #fff;
-  border: 10px solid #000;
+  border: 10px solid #002233;
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
@@ -74,23 +83,25 @@ html {
   text-decoration: none;
   border-radius: 4px;
   color: #fff;
-  padding: 1rem 2rem;
-  background-color: black;
+  padding: 1rem;
+  background-color: #002233;
   transition: all 0.3s;
 }
 .btn:is(:hover, :active) {
-  background-color: rgb(48, 48, 48);
+  background-color: #002233d9;
 }
 .overlay {
-  height: 100vh;
-  width: 50vw;
   position: fixed;
   top: 0;
   right: 0;
+
+  height: 100vh;
+  width: 40vw;
+
   opacity: 0;
   visibility: hidden;
   transform: translate(30rem);
-  background-color: #000000ff;
+  background-color: #002233;
 
   transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
@@ -101,7 +112,7 @@ html {
   justify-content: center;
 
   padding-top: 10rem;
-  margin-left: 40%;
+  margin-left: 20%;
 }
 .overlay-content div a {
   display: flex;

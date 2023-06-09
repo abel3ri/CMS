@@ -1,3 +1,15 @@
+<?php
+  include "../controllers/db_connect.php";
+  session_start();
+  if($idNumber = $_SESSION['idNumber']){
+    $sql = "SELECT * FROM users WHERE id_number = '$idNumber';";
+    $result = mysqli_query($conn, $sql);
+    if($result){
+      $userData = mysqli_fetch_assoc($result);
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,7 +26,7 @@
       <ion-icon class="close" name="close"></ion-icon>
     </nav>
     <section class="header">
-      <h1 class="username">Hello, username</h1>
+      <h1 class="username">Hello, <?php echo $userData['name'] ?></h1>
       <div class="circle-img">
         <ion-icon name="person-circle"></ion-icon>
       </div>
@@ -26,7 +38,7 @@
     <div class="overlay">
       <div class="overlay-content">
         <div>
-          <a href="#"
+          <a href="../pages/profile.html"
             ><ion-icon class="overlay-icon" name="person-circle"></ion-icon>
             Profile</a
           >
