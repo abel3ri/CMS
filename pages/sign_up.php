@@ -85,7 +85,7 @@
       </form>
       <div>
         <p>Already have an account?</p>
-        <a class="sign-up" href="./login.html">Login</a>
+        <a class="sign-up" href="../pages/login.php">Login</a>
       </div>
     </section>
     <script src="../scripts/formValidator.js"></script>

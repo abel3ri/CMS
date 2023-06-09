@@ -23,10 +23,10 @@
         <ion-icon name="person-circle"></ion-icon>
       </div>
       <div class="btns">
-        <a class="btn" href="#">Request clearance</a>
-        <a class="btn" href="#">Check clearacne status</a>
-        <a class="btn" href="../pages/index.html">Home page</a>
-        <a class="btn" href="#">Logout</a>
+        <a class="btn request-clearance" href="#">Request clearance</a>
+        <a class="btn check-clearance" href="#">Check clearacne status</a>
+        <a class="btn homepage" href="#">Home page</a>
+        <a class="btn logout" href="../controllers/logout.php">Logout</a>
       </div>
     </section>
     <div class="overlay">
@@ -44,7 +44,7 @@
           >
         </div>
         <div>
-          <a href="#"
+          <a href="../controllers/logout.php"
             ><ion-icon class="overlay-icon" name="log-out"></ion-icon> Logout</a
           >
         </div>
