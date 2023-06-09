@@ -162,7 +162,7 @@ function backToTop() {
       }
     },
     {
-      rootMargin: "-400px",
+      rootMargin: "-100px",
     }
   );
 
@@ -176,3 +176,19 @@ function backToTop() {
   });
 }
 backToTop();
+
+function faq() {
+  const faqs = document.querySelector(".faqs");
+  const faqcontainers = document.querySelectorAll(".faq-conatiner");
+  faqs.addEventListener("click", (e) => {
+    const content = document.querySelector(
+      `.content[data-item='${e.target.getAttribute("data-item")}']`
+    );
+    const icon = document.querySelector(
+      `.faq-btn-icon[data-item='${e.target.getAttribute("data-item")}']`
+    );
+    content.classList.toggle("hidden");
+    icon.classList.toggle("rotate");
+  });
+}
+faq();
