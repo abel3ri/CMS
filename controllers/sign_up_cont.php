@@ -2,11 +2,10 @@
 include "./db_connect.php";
 if(isset($_POST['signup'])){
    try {
-    $name = $_POST['name'];
-    $idNumber = $_POST['idNumber'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    print_r($_POST);
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $idNumber = mysqli_real_escape_string($conn, $_POST['idNumber']);
+    $email =mysqli_real_escape_string($conn,$_POST['email']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
 
     $sql = "INSERT INTO users(name, id_number, email, password) VALUES ('$name', '$idNumber', '$email', '$password');";
 

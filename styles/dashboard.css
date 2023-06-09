@@ -15,7 +15,7 @@ html {
   font-family: "Poppins", sans-serif;
 }
 body {
-  height: 100vh;
+  /* background-color: #002233; */
 }
 .nav {
   display: flex;
@@ -23,7 +23,7 @@ body {
   padding-left: 2rem;
 
   position: relative;
-  background-color: #002233;
+  background-color: #002233cd;
   height: 5rem;
 }
 .menu,
@@ -45,7 +45,8 @@ body {
   right: 3rem;
 }
 .username {
-  color: #002233;
+  color: #868e96;
+  font-size: 2.4rem;
 }
 .cms {
   color: #fff;
@@ -56,8 +57,16 @@ body {
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  max-width: 30rem;
+
+  max-width: 40rem;
+  height: 80vh;
+
+  padding: 1rem 3rem;
   margin: 2rem auto;
+
+  background-color: #fff;
+  box-shadow: 1px 5px 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .circle-img {
@@ -73,10 +82,12 @@ body {
 .circle-img ion-icon {
   font-size: 9rem;
   text-align: center;
+  color: #0066ff;
 }
 
 .btns {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 .btn:is(:link, :visited) {

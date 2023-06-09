@@ -1,13 +1,5 @@
 <?php
-  include "../controllers/db_connect.php";
-  session_start();
-  if($idNumber = $_SESSION['idNumber']){
-    $sql = "SELECT * FROM users WHERE id_number = '$idNumber';";
-    $result = mysqli_query($conn, $sql);
-    if($result){
-      $userData = mysqli_fetch_assoc($result);
-    }
-  }
+   include "../controllers/db_request.php";
 ?>
 
 <!DOCTYPE html>
@@ -33,12 +25,14 @@
       <div class="btns">
         <a class="btn" href="#">Request clearance</a>
         <a class="btn" href="#">Check clearacne status</a>
+        <a class="btn" href="../pages/index.html">Home page</a>
+        <a class="btn" href="#">Logout</a>
       </div>
     </section>
     <div class="overlay">
       <div class="overlay-content">
         <div>
-          <a href="../pages/profile.html"
+          <a href="../pages/profile.php"
             ><ion-icon class="overlay-icon" name="person-circle"></ion-icon>
             Profile</a
           >
