@@ -35,6 +35,10 @@ nav {
   transform: translate(-50%, -50%);
   min-width: 40rem;
 }
+.profile div {
+  display: flex;
+  justify-content: space-between;
+}
 hr {
   margin: 1rem 0;
 }
