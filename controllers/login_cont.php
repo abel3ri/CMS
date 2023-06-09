@@ -9,6 +9,8 @@
             $result = mysqli_query($conn, $sql);
             
             if($result){
+                session_start();
+                $_SESSION['idNumber'] = $idNumber;
                 // user found
                 $userData = mysqli_fetch_assoc($result);
                 if($userData){
@@ -26,7 +28,7 @@
             } 
 
         } catch(Exception $e){
-            echo $e->getMessage() . $e->getCode();
+            echo $e;
         }
         
     }

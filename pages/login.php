@@ -65,7 +65,7 @@
       </form>
       <div>
         <p>Don't have an account?</p>
-        <a class="sign-up" href="./signup.html">Sing up</a>
+        <a class="sign-up" href="../pages/sign_up.php">Sing up</a>
       </div>
     </section>
     <script src="../scripts/formValidator.js"></script>

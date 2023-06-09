@@ -55,7 +55,7 @@
         ?></h2>
     </div>
       <hr />
-      <a href="#" class="logout">Logout</a>
+      <a href="../controllers/logout.php" class="logout">Logout</a>
     </div>
   </body>
 </html>
