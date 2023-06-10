@@ -89,5 +89,6 @@
       </div>
     </section>
     <script src="../scripts/formValidator.js"></script>
+    <script src="../scripts/utility.js"></script>
   </body>
 </html>

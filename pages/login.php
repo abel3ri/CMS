@@ -1,9 +1,9 @@
-<?php 
+<!-- <?php 
   $val = "";
   if(isset($_GET['val'])){
     $val = $_GET['val'];
   }
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,13 +16,15 @@
   <body>
     <section class="form-container">
       <div class="error-pop-up" data-show="<?php echo $val?>">
-        <p><?php  if(isset($_GET["val"])){
+        <p>
+          <?php  if(isset($_GET["val"])){
           if($_GET['val'] == "no_match"){
             echo "Incorrect password";
           } else {
             echo "User not found.";
           }
-        }; ?></p>
+        }; ?>
+        </p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -69,5 +71,6 @@
       </div>
     </section>
     <script src="../scripts/formValidator.js"></script>
+    <script src="../scripts/utility.js"></script>
   </body>
 </html>
