@@ -1,5 +1,9 @@
 <?php
    include "../controllers/db_request.php";
+   $val = "";
+   if(isset($_GET['val'])){
+    $val = $_GET['val'];
+   }
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +17,21 @@
   </head>
   <body>
     <nav class="nav">
-      <h1 class="cms">CMS</h1>
+      <div class="messagePopUp <?php echo $val?>">
+    <?php 
+      if($val == "success") echo "Your request is submitted successfully!";
+      else if($val == "re_submission"){
+        echo "You have already submitted a request.";
+      } else if($val == "failed") {
+        echo "Request failed please try again later";
+      }
+    ?>
+    <button class="closeBtn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="close-icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+</button>
+  </div>
+      <h1 class="cms"><a class="logo" href="../index.html">CMS</a></h1>
       <ion-icon class="menu" name="menu"></ion-icon>
       <ion-icon class="close" name="close"></ion-icon>
     </nav>
@@ -23,7 +41,7 @@
         <ion-icon name="person-circle"></ion-icon>
       </div>
       <div class="btns">
-        <a class="btn request-clearance" href="#">Request clearance</a>
+        <a class="btn request-clearance" href="../controllers/request.php?user_id=<?php echo $userData['id']; ?>">Request clearance</a>
         <a class="btn check-clearance" href="#">Check clearacne status</a>
         <a class="btn homepage" href="#">Home page</a>
         <a class="btn logout" href="../controllers/logout.php">Logout</a>
