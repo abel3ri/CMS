@@ -80,7 +80,7 @@
             name="signup"
             class="submit-btn"
           />
-          <a href="../pages/index.html" class="cancel-btn"> Cancel </a>
+          <a href="../index.html" class="cancel-btn"> Cancel </a>
         </div>
       </form>
       <div>

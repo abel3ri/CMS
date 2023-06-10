@@ -1,17 +1,17 @@
 <?php 
     include "../controllers/db_connect.php";
-
-    if(isset($_GET['user_id'])){
-        $id = $_GET['user_id'];
+    session_start();
+    if(isset($_SESSION['idNumber'])){
+        $idNumber = $_SESSION['idNumber'];
 
         // Fetch data from database about the current user in order to associate this exact user with the request
        try {
-        $sql = "SELECT id_number, name FROM users WHERE id = '$id';";
+        $sql = "SELECT name FROM users WHERE id_number = '$idNumber';";
 
         $result = mysqli_query($conn, $sql);
+
         if($result){
            $userData = mysqli_fetch_assoc($result);
-           $idNumber = mysqli_real_escape_string($conn, $userData['id_number']);
            $name = mysqli_real_escape_string($conn, $userData['name']);
 
            // Write data into requests database with default value of waiting for status 

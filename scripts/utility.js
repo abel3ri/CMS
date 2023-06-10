@@ -29,3 +29,17 @@ if ((LoginContainer = document.querySelector(".form-container"))) {
     LoginContainer.classList.add("visible");
   });
 }
+if ((messagePopUp = document.querySelector(".messagePopUp"))) {
+  const closeBtn = document.querySelector(".closeBtn");
+  closeBtn.addEventListener("click", () => {
+    messagePopUp.classList.add("hidden");
+    closeBtn.classList.add("hidden");
+    window.history.pushState({}, null, window.location.href.split("?val")[0]);
+  });
+
+  setTimeout(() => {
+    messagePopUp.classList.add("hidden");
+    closeBtn.classList.add("hidden");
+    window.history.pushState({}, null, window.location.href.split("?val")[0]);
+  }, 3000);
+}

@@ -41,8 +41,8 @@
         <ion-icon name="person-circle"></ion-icon>
       </div>
       <div class="btns">
-        <a class="btn request-clearance" href="../controllers/request.php?user_id=<?php echo $userData['id']; ?>">Request clearance</a>
-        <a class="btn check-clearance" href="#">Check clearacne status</a>
+        <a class="btn request-clearance" href="../controllers/request.php">Request clearance</a>
+        <a class="btn check-clearance" href="../pages/requestStatus.php">Check clearacne status</a>
         <a class="btn homepage" href="#">Home page</a>
         <a class="btn logout" href="../controllers/logout.php">Logout</a>
       </div>

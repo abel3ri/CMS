@@ -106,11 +106,13 @@ function hidePopUp() {
     closeBtn.addEventListener("click", () => {
       errorPopUp.classList.remove("show");
       closeBtn.classList.remove("show");
+      window.history.pushState({}, null, window.location.href.split("?val")[0]);
     });
 
     setTimeout(() => {
       errorPopUp.classList.remove("show");
       closeBtn.classList.remove("show");
+      window.history.pushState({}, null, window.location.href.split("?val")[0]);
     }, 3000);
   }
 }
