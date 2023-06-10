@@ -95,23 +95,25 @@ validateForm();
 
 // Check if the user id is already taken by somone else and display an erro  messag the will fade out automatically after 3 seconds
 
-function hideTopUp() {
+function hidePopUp() {
   const closeBtn = document.querySelector(".close");
-  const errorTopUp = document.querySelector(".error-pop-up");
-  if (errorTopUp.getAttribute("data-show")) {
+  const errorPopUp = document.querySelector(".error-pop-up");
+  if (errorPopUp.getAttribute("data-show")) {
     // console.log(errorTopUp.getAttribute("data-show"));
-    errorTopUp.classList.add("show");
+    errorPopUp.classList.add("show");
     closeBtn.classList.add("show");
 
     closeBtn.addEventListener("click", () => {
-      errorTopUp.classList.remove("show");
+      errorPopUp.classList.remove("show");
       closeBtn.classList.remove("show");
+      window.history.pushState({}, null, window.location.href.split("?val")[0]);
     });
 
     setTimeout(() => {
-      errorTopUp.classList.remove("show");
+      errorPopUp.classList.remove("show");
       closeBtn.classList.remove("show");
+      window.history.pushState({}, null, window.location.href.split("?val")[0]);
     }, 3000);
   }
 }
-hideTopUp();
+hidePopUp();

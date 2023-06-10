@@ -26,6 +26,45 @@ body {
   background-color: #002233cd;
   height: 5rem;
 }
+.messagePopUp {
+  opacity: 0;
+  position: fixed;
+  top: 2rem;
+  left: 14rem;
+  transform: translateY(-10rem);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s;
+}
+.success {
+  opacity: 1;
+  background-color: green;
+  transform: translateY(0);
+}
+.failed,
+.re_submission {
+  opacity: 1;
+  background-color: red;
+  transform: translateY(0);
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(-10rem);
+  pointer-events: none;
+}
+.close-icon {
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: -1em;
+  right: -1rem;
+  width: 32px;
+}
+
+.logo:is(:link, :visited) {
+  text-decoration: none;
+  color: #fff;
+}
 .menu,
 .close {
   cursor: pointer;
