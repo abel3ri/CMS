@@ -67,7 +67,7 @@
         </h2>
       </div>
       <hr />
-      <a href="../pages//dashboard.php" class="logout">Go back</a>
+      <a href="../pages/dashboard.php" class="logout">Go back</a>
     </div>
   </body>
 </html>

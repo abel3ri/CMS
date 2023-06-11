@@ -21,7 +21,7 @@
     <?php 
       if($val == "success") echo "Your request is submitted successfully!";
       else if($val == "re_submission"){
-        echo "You have already submitted a request.";
+        echo "You have already submitted a request";
       } else if($val == "failed") {
         echo "Request failed please try again later";
       }
