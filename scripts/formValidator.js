@@ -23,14 +23,14 @@ const normalBorder = function (element) {
 function checkInputs() {
   // checking for id validation
 
-  // create an object for each input to check whether the are valid or or not
+  // create an object that holds boolean property for each input to check whether they are valid or not
 
   let val = { validId: true, validPass: true, validRePass: true };
   if (idInput.value == "" || idInput.value == null) {
     idInput.parentElement.firstElementChild.innerText =
       "Please provide an id number";
     errorBorder(idInput);
-    // only update validId preoprty to make the other input fields border turn green
+    // only update validId property to make the other input fields border turn green
     val.validId = false;
   }
   // checking for password validation
@@ -93,7 +93,7 @@ function validateForm() {
 // final function calling for validation
 validateForm();
 
-// Check if the user id is already taken by somone else and display an erro  messag the will fade out automatically after 3 seconds
+// Check if the user id is already taken by somone else and display an error  messag that will fade out automatically after 3 seconds if the user leaves it intentionally
 
 function hidePopUp() {
   const closeBtn = document.querySelector(".close");
