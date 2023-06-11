@@ -100,8 +100,10 @@ function hidePopUp() {
   const errorPopUp = document.querySelector(".error-pop-up");
   if (errorPopUp.getAttribute("data-show")) {
     // console.log(errorTopUp.getAttribute("data-show"));
-    errorPopUp.classList.add("show");
-    closeBtn.classList.add("show");
+    setTimeout(() => {
+      errorPopUp.classList.add("show");
+      closeBtn.classList.add("show");
+    }, 10);
 
     closeBtn.addEventListener("click", () => {
       errorPopUp.classList.remove("show");
